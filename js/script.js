@@ -3,15 +3,15 @@
 let ul = document.getElementById('numbers-list');
 let countdown = document.getElementById('countdown');
 let instructions = document.getElementById('instructions');
-let userNUmbers = document.querySelectorAll ('form-control');
 let answersForm = document.getElementById('answers-form');
+let button = document.querySelector('.btn');
 
 
 //Creo il countdown
 let seconds = 5;
 countdown.textContent = seconds;
 
-//creo la funzione per ridurre il tempo, dove una volta arrivato a 0 si ferma e appaiono i numeri da inserire da parte dell'utente
+//creo la funzione per ridurre il tempo, dove una volta arrivato a 0 si ferma e appaiono i numeri da inserire da parte
 function count(){
     if(seconds > 0){
         seconds --;
@@ -42,5 +42,19 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(randomNumbers);
 
+function checkNumbers(){
+    let input = document.querySelectorAll ('.form-control');
+    let userNumbers = [];
+    for(let i=0; i<5; i++){
+        let userInput = input[i].value;
+        userNumbers.push(parseInt(userInput));
+    }
+    console.log(userNumbers);
+}
+
+button.addEventListener('click', function (event) {
+    event.preventDefault();
+    checkNumbers();
+});
 
 
