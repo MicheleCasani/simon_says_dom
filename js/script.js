@@ -11,7 +11,7 @@ let answersForm = document.getElementById('answers-form');
 let seconds = 5;
 countdown.textContent = seconds;
 
-//creo la funzione per ridurre il tempo
+//creo la funzione per ridurre il tempo, dove una volta arrivato a 0 si ferma e appaiono i numeri da inserire da parte dell'utente
 function count(){
     if(seconds > 0){
         seconds --;
@@ -22,7 +22,7 @@ function count(){
         countdown.textContent = 'Ora indica i 5 numeri';
         ul.classList.add('d-none');
         instructions.classList.add('d-none');
-        answersForm = classList.remuve('d-none');
+        answersForm.classList.remove('d-none');
         clearInterval(timer)
 
     }
@@ -42,6 +42,5 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(randomNumbers);
 
-//rendo visibili i numeri che l'utente deve inserire
-userNUmbers.parseint(prompt('inseriscii numeri'));
+
 
