@@ -56,11 +56,11 @@ function checkNumbers() {
 
 //creo la funzione per vedere i numeri indovinati
 function checkResult(array1, array2) {
-    if (array1.lenght !== array2.length) {
+    if (array1.length !== array2.length) {
         return false;
     }
 
-    for (let i = 0; i < array1.lenght; i++) {
+    for (let i = 0; i < array1.length; i++) {
         if (array1[i] !== array2[i]) {
             return false;
         }
