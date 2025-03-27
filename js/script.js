@@ -56,6 +56,16 @@ function checkNumbers() {
 
 //creo la funzione per vedere i numeri indovinati
 function checkResult(array1, array2) {
+
+    randomNumbers.sort(function(a, b) {
+        return a - b;
+    });
+
+    userNumbers.sort(function(a, b) {
+        return a - b;
+    });
+
+
     if (array1.length !== array2.length) {
         return false;
     }
@@ -64,10 +74,8 @@ function checkResult(array1, array2) {
         if (array1[i] !== array2[i]) {
             return false;
         }
-        else {
-            return true;
-        }
     }
+    return true;
 }
 
 
